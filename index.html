@@ -1,0 +1,101 @@
+<html>
+<head>
+<base href="/">
+<title>Angular2 Openlayers3 Material</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="http://openlayers.org/en/v3.15.1/css/ol.css" type="text/css">
+<!--link rel="stylesheet" href="node_modules/openlayers/ol.css"	type="text/css"> -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<!-- 1. Load libraries -->
+<!-- IE required polyfills, in this exact order -->
+<script src="node_modules/es6-shim/es6-shim.min.js"></script>
+<script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+<script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+
+<script src="node_modules/es6-shim/es6-shim.js"></script>
+<script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+<script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="node_modules/rxjs/bundles/Rx.js"></script>
+<script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+<script src="node_modules/angular2/bundles/router.dev.js"></script>
+<script src="node_modules/angular2/bundles/http.dev.js"></script>
+
+<script src="http://openlayers.org/en/v3.15.1/build/ol.js"></script>
+<!--<script src="http://openlayers.org/en/v3.15.1/build/ol-debug.js"></script>-->
+<!--<script src="node_modules/openlayers/ol.js"></script>-->
+
+
+<!-- 2. Configure SystemJS -->
+<script>
+  System.config({
+    map: {
+      '@angular2-material': 'node_modules/@angular2-material'
+    },
+    packages: {
+      // The core package is required as a peerDependency for other components.
+      '@angular2-material/core': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'core.js'
+      },
+      '@angular2-material/components': {
+        format: 'cjs',
+        defaultExtension: 'js'
+      },
+      '@angular2-material/checkbox': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'checkbox.js'
+      },
+      '@angular2-material/button': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'button.js'
+      },
+      '@angular2-material/toolbar': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'toolbar.js'
+      },
+      '@angular2-material/sidenav': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'sidenav.js'
+      },
+      '@angular2-material/list': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'list.js'
+      },
+      '@angular2-material/input': {
+        format: 'cjs',
+        defaultExtension: 'js',
+        main: 'input.js'
+      },
+      app: {
+        format: 'register',
+        defaultExtension: 'js'
+      }
+    }
+  });
+  System.import('app/main').then(null, console.error.bind(console));
+</script>
+
+<style>
+.map {
+	height: 800px;
+	width: 100%;
+}
+</style>
+
+</head>
+
+<!-- 3. Display the application -->
+<body>
+	<my-app>Loading...</my-app>
+
+</body>
+</html>

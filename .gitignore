@@ -1,0 +1,10 @@
+# dependencies
+node_modules
+
+# compiled output
+typings
+app/**/*.js
+app/**/*.map
+
+# IDE
+.project

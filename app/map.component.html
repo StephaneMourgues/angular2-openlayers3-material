@@ -1,0 +1,43 @@
+<md-sidenav-layout>
+
+<div id="mymap" class="map"></div>
+
+
+<div class="menuToolbar">
+<button #hamburgerButton md-icon-button color="primary" (click)="openSideNave(mysidenav)">
+    <i class="material-icons md-24" >menu</i>
+</button>
+<button md-icon-button color="primary" (click)="zoomIn()">
+    <i class="material-icons md-24">add</i>
+</button>
+<button md-icon-button color="primary" (click)="zoomOut()">
+    <i class="material-icons md-24">remove</i>
+</button>
+<button md-icon-button color="primary" (click)="doSomething()">
+    <i class="material-icons md-24">autorenew</i>
+</button>
+</div>
+
+<md-sidenav #mysidenav align="end" mode="side"> <md-toolbar
+    [color]="primary">
+<button md-icon-button color="primary" (click)="closeSideNave(mysidenav)">
+    <i class="material-icons md-24">close</i>
+</button>
+<span>Links</span> </md-toolbar> <md-list> <md-list-item> <img
+    md-list-avatar src="./link_green_40x40.png" alt="avatar">
+<h3 md-line>Length</h3>
+<p md-line>16.174 km</p>
+</md-list-item> <md-list-item> <img md-list-avatar
+    src="./link_green_40x40.png" alt="avatar"> <md-input
+    class="demo-full-width" placeholder="Length" value="16.174 km" disabled></md-input>
+</md-list-item> <md-list-item> <img md-list-avatar src="./sam_40x40.jpg"
+    alt="avatar">
+<h3 md-line>We want you</h3>
+<p md-line style="width: 100%">
+    <md-input class="demo-full-width" placeholder="Address 2">plop</md-input>
+</p>
+</md-list-item> </md-list> </md-sidenav>
+
+
+
+</md-sidenav-layout>
